@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dh_tire_brand,dh.tire.brand,model_dh_tire_brand,base.group_user,1,1,1,1
+access_dh_tire_size,dh.tire.size,model_dh_tire_size,base.group_user,1,1,1,1
+access_dh_tire_pattern,dh.tire.pattern,model_dh_tire_pattern,base.group_user,1,1,1,1

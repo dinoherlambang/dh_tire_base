@@ -1,0 +1,66 @@
+<odoo>
+    <!-- Brand Views -->
+    <record id="view_dh_tire_brand_tree" model="ir.ui.view">
+        <field name="name">dh.tire.brand.tree</field>
+        <field name="model">dh.tire.brand</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_dh_tire_brand" model="ir.actions.act_window">
+        <field name="name">Tire Brands</field>
+        <field name="res_model">dh.tire.brand</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Size Views -->
+    <record id="view_dh_tire_size_tree" model="ir.ui.view">
+        <field name="name">dh.tire.size.tree</field>
+        <field name="model">dh.tire.size</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_dh_tire_size" model="ir.actions.act_window">
+        <field name="name">Tire Sizes</field>
+        <field name="res_model">dh.tire.size</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Pattern Views -->
+    <record id="view_dh_tire_pattern_tree" model="ir.ui.view">
+        <field name="name">dh.tire.pattern.tree</field>
+        <field name="model">dh.tire.pattern</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="brand_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_dh_tire_pattern" model="ir.actions.act_window">
+        <field name="name">Tread Patterns</field>
+        <field name="res_model">dh.tire.pattern</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Configuration Menu -->
+    <menuitem id="menu_tire_config_root" 
+              name="Tire Master Data" 
+              parent="stock.menu_stock_config_settings" 
+              sequence="100"/>
+              
+    <menuitem id="menu_tire_brand" name="Brands" parent="menu_tire_config_root" action="action_dh_tire_brand" sequence="10"/>
+    <menuitem id="menu_tire_size" name="Sizes" parent="menu_tire_config_root" action="action_dh_tire_size" sequence="20"/>
+    <menuitem id="menu_tire_pattern" name="Patterns" parent="menu_tire_config_root" action="action_dh_tire_pattern" sequence="30"/>
+</odoo>
